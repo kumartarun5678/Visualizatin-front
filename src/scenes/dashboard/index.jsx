@@ -4,11 +4,13 @@ import { useGetVisualizationQuery } from "state/api";
 import LineChart from "scenes/lineChart";
 import PieChart from "scenes/pieChart";
 import BarChart from "scenes/barChart";
+import Header from "components/Header";
 
 const Dashboard = () => {
   const { data: visualizationData, isLoading: visualizationLoading } = useGetVisualizationQuery();
   return (
     <Box m="1.5rem 2.5rem">
+      <Header title="Welcome To Dashboard !"  />
       {visualizationLoading ? (
         <Typography>Loading visualization chart...</Typography>
       ) : (
